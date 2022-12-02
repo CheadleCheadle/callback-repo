@@ -11,7 +11,9 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 // Your code here
+const arrowRestSum = (...args) => args.reduce((sum, cur) => sum += cur);
 
+console.log()
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

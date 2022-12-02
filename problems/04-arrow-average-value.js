@@ -11,9 +11,15 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
 // Your code here
-
+const arrowAvgValue = (args) => {
+  let sum = args.reduce((accum, el) => accum += el);
+  return sum / args.length;
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
+console.log(arrowAvgValue([10, 20])); // => 15
+arrowAvgValue([2, 3, 7]); // => 4
+arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 try {
   module.exports = arrowAvgValue;
 } catch (e) {
