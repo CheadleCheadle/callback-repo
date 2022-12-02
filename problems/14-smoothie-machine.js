@@ -22,7 +22,15 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here
+const smoothieMachine = (...string1) =>{
+  let mainStr = "I'm having a smoothie with " ;
+  return function(...string2){
+    string1.push(...string2)
+    let newStr = mainStr + string1.join(' and ')
+    return newStr
+  }
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

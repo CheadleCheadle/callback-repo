@@ -13,7 +13,20 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here
+const recVolume = (height) =>{
+  let dimensions = [height];
+  let sides = function(num){
+    if(dimensions.length < 3){
+      dimensions.push(num)
+    }
+    if(dimensions.length === 3){
+    return  dimensions[0] * dimensions[1] * dimensions[2]
+    }else{
+      return sides;
+    }
+  }
+  return sides;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -43,7 +43,19 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// Your code here
+const curriedSum = (numArgs) => {
+  let nums = [];
+  if(numArgs <= 0)return null;
+  let _curriedSum = function(number){
+    nums.push(number)
+    if(nums.length === numArgs){
+    let total = 0;
+    nums.forEach(n => total += n)
+    return total;
+    }else return _curriedSum
+  }
+  return  _curriedSum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
